@@ -65,3 +65,24 @@ window.addEventListener('scroll', () => {
         backToTopButton.classList.remove('visible');
     }
 });
+  document.addEventListener('DOMContentLoaded', () => {
+      const darkModeToggle = document.getElementById('darkMode');
+      const html = document.documentElement;
+
+      // Check saved preference
+      if (localStorage.getItem('darkMode') === 'enabled') {
+          html.classList.add('dark');
+          darkModeToggle.checked = true;
+      }
+
+      // Toggle dark mode
+      darkModeToggle.addEventListener('change', () => {
+          if (darkModeToggle.checked) {
+              html.classList.add('dark');
+              localStorage.setItem('darkMode', 'enabled');
+          } else {
+              html.classList.remove('dark');
+              localStorage.setItem('darkMode', 'disabled');
+          }
+      });
+  });
