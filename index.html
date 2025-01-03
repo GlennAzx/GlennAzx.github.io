@@ -1,7 +1,133 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glenn Ang | Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/elevator.js@1.0.1/elevator.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div id="particles-js" class="fixed inset-0 z-0"></div>
+    
+    <div class="theme-switch-wrapper fixed top-4 right-4 z-50">
+        <label class="theme-switch">
+            <input type="checkbox" id="darkMode">
+            <div class="slider round"></div>
+        </label>
+    </div>
+
+    <div class="relative z-10">
+        <header class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
+            <nav class="max-w-6xl mx-auto px-4 py-4">
+                <div class="flex justify-end items-center">
+                    <div class="space-x-8">
+                        <a href="#work" class="hover:text-blue-600 dark:text-white">Work</a>
+                        <a href="#about" class="hover:text-blue-600 dark:text-white">About</a>
+                        <a href="#contact" class="hover:text-blue-600 dark:text-white">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="max-w-6xl mx-auto px-4">
+            <section id="intro" class="min-h-screen flex items-center">
+                <div>
+                    <h1 class="text-6xl font-bold mb-4 dark:text-white">Glenn Ang</h1>
+                    <p class="text-2xl text-gray-600 dark:text-gray-300">Software Developer</p>
+                </div>
+            </section>
+
+            <section id="work" class="py-20">
+                <h2 class="text-3xl font-bold mb-12 dark:text-white">Latest Github Repos</h2>
+                <div id="projects-grid" class="grid gap-8">
+                    <!-- Projects will be dynamically loaded here -->
+                </div>
+            </section>
+
+            <section id="about" class="py-20">
+                <h2 class="text-3xl font-bold mb-8 dark:text-white">About</h2>
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="text-lg dark:text-gray-300">Software developer experienced in Robotic Process Automation, React Native android app development and Data Analytics </p>
+                    <div class="mt-12">
+                        <h3 class="text-2xl font-bold mb-4 dark:text-white">Programming Languages</h3>
+                        <div class="language-slider">
+                            <div class="language-track">
+                                <!-- First set -->
+                                <div class="language-item">
+                                    <i class="fab fa-java text-4xl mb-2"></i>
+                                    <span>Java</span>
+                                </div>
+                                <div class="language-item">
+                                    <i class="fab fa-python text-4xl mb-2"></i>
+                                    <span>Python</span>
+                                </div>
+                                <div class="language-item">
+                                    <i class="fas fa-code text-4xl mb-2"></i>
+                                    <span>C</span>
+                                </div>
+                                <div class="language-item">
+                                    <i class="fas fa-database text-4xl mb-2"></i>
+                                    <span>SQL</span>
+                                </div>
+                                <div class="language-item">
+                                    <i class="fab fa-js text-4xl mb-2"></i>
+                                    <span>JavaScript</span>
+                                </div>
+                                <!-- Duplicate set for seamless loop -->
+                                <div class="language-item">
+                                    <i class="fab fa-java text-4xl mb-2"></i>
+                                    <span>Java</span>
+                                </div>
+                                <div class="language-item">
+                                    <i class="fab fa-python text-4xl mb-2"></i>
+                                    <span>Python</span>
+                                </div>
+                                <div class="language-item">
+                                    <i class="fas fa-code text-4xl mb-2"></i>
+                                    <span>C</span>
+                                </div>
+                                <div class="language-item">
+                                    <i class="fas fa-database text-4xl mb-2"></i>
+                                    <span>SQL</span>
+                                </div>
+                                <div class="language-item">
+                                    <i class="fab fa-js text-4xl mb-2"></i>
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="contact" class="py-20">
+                  <h2 class="text-3xl font-bold mb-8 dark:text-white">Get in Touch</h2>
+                  <div class="flex space-x-8">
+                      <a href="mailto:glennangzx@proton.me" class="contact-link">
+                          <i class="fas fa-envelope text-2xl"></i>
+                      </a>
+                      <a href="https://github.com/GlennAzx" class="contact-link">
+                          <i class="fab fa-github text-2xl"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/glenn-azx/" class="contact-link">
+                          <i class="fab fa-linkedin text-2xl"></i>
+                      </a>
+                  </div>
+              </section>
+          </main>
+
+        <footer class="py-8 text-center dark:text-white">
+            <button class="back-to-top">Back to Top ↑</button>
+        </footer>
+    </div>
+
+    <script src="particles-config.js"></script>
+    <script src="github-fetcher.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
