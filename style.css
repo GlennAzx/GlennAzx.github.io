@@ -3,25 +3,36 @@
     --text-color: #1a1a1a;
     --accent-color: #0066ff;
 }
+  .dark {
+      --bg-color: #000000;
+      --text-color: #ffffff;
+      --accent-color: #60a5fa;
+  }
 
-.dark {
-    --bg-color: #000000;     /* Change this for main background */
-    --text-color: #ffffff;    /* Change this for text color */
-    --accent-color: #1d242e;  /* Change this for highlights */
-}
+  .dark nav {
+      background: rgba(0, 0, 0, 0.8);
+  }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  .dark .language-slider::before {
+      background: linear-gradient(to right, rgb(0, 0, 0) 0%, transparent 100%);
+  }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-}
+  .dark .language-slider::after {
+      background: linear-gradient(to left, rgb(0, 0, 0) 0%, transparent 100%);
+  }
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+  }
 
 .container {
     max-width: 1200px;
@@ -37,14 +48,14 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: background-color 0.3s ease;
 }
 
 .dark nav {
-    background: rgba(17, 24, 39, 0.8);
+    background: rgba(20, 19, 19, 0.8);
 }
   /* Light mode styles */
   nav a {
@@ -191,7 +202,12 @@ section {
       transition: .4s;
   }
 
-  .slider:before {
+  .slider.round {
+      border-radius: 34px;
+  }
+
+  .slider.round:before {
+      border-radius: 50%;
       background-color: #fff;
       bottom: 4px;
       content: "";
@@ -202,20 +218,28 @@ section {
       width: 26px;
   }
 
+  .fa-sun {
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      font-size: 18px;
+      color: #333;
+  }
+
+  .fa-moon {
+      position: absolute;
+      right: 6px;
+      top: 8px;
+      font-size: 18px;
+      color: #ffffff;
+  }
+
   input:checked + .slider {
-      background-color: #66bb6a;
+      background-color: #333;
   }
 
   input:checked + .slider:before {
       transform: translateX(26px);
-  }
-
-  .slider.round {
-      border-radius: 34px;
-  }
-
-  .slider.round:before {
-      border-radius: 50%;
   }
 /* Scroll animation */
 .scroll-down {
@@ -299,11 +323,11 @@ section {
   }
 
   .dark .language-slider::before {
-      background: linear-gradient(to right, rgb(17, 24, 39) 0%, transparent 100%);
+      background: linear-gradient(to right, rgb(20, 19, 19) 0%, transparent 100%);
   }
 
   .dark .language-slider::after {
-      background: linear-gradient(to left, rgb(17, 24, 39) 0%, transparent 100%);
+      background: linear-gradient(to left, rgb(20, 19, 19) 0%, transparent 100%);
   }
 
   .language-track {
